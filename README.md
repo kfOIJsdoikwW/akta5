@@ -13,6 +13,9 @@ képet a szerveren lévő `img/pluss.jpg`-vel veti össze kis felbontáson, így
 valódi EXIF-adatot írni. Helyi (file://) megnyitásnál az összehasonlítás nem működik, ott bármilyen
 kép elfogadott; GitHub Pages-en már csak a helyes.
 
+## Dani képernyőképe
+Az `img/kert_build.jpg` a Grow a Garden-kép; a böngészőfülek, a könyvjelzők és a tálca HTML-ből kerülnek rá, így a szövegük az `app.js`-ben (`shotHTML`) szerkeszthető.
+
 ## Beállítás az app.js elején
 `SHOW_LILI_REPLIES = false` esetén a Dani–Lili beszélgetésben csak a Lilinek címzett üzenetek látszanak.
 

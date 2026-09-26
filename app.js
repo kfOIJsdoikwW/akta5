@@ -172,9 +172,9 @@ const CD_DM = [
   { a: 'Dani_15', d: '2025.03.03', t: '16:20', x: 'na végre itt is beszélhetünk 😄' },
   { a: 'lili_csillag', d: '2025.03.03', t: '16:21', x: 'hali' },
   { a: 'Dani_15', d: '2025.03.03', t: '16:22', x: 'itt sokkal jobb, itt nem figyel senki' },
-  { a: 'Dani_15', d: '2025.03.05', t: '17:10', x: 'nézd, ezen dolgozom: saját grow a garden-szerű kertet építek studióban', shot: true },
-  { a: 'lili_csillag', d: '2025.03.05', t: '17:14', x: 'wow ez nagyon jó!!' },
-  { a: 'Dani_15', d: '2025.03.05', t: '17:15', x: 'ha kész lesz, te leszel az első, aki kipróbálhatja 😊' },
+  { a: 'Dani_15', d: '2025.03.05', t: '17:10', x: 'nézd, ma ezt szereztem grow a gardenben 😄 arany gyümölcs!!', shot: true },
+  { a: 'lili_csillag', d: '2025.03.05', t: '17:14', x: 'wow arany?! 😱 nekem még egy sincs' },
+  { a: 'Dani_15', d: '2025.03.05', t: '17:15', x: 'ha akarod, egyszer neked adom 😊' },
   { a: 'Dani_15', d: '2025.03.07', t: '17:45', x: 'te sokkal érettebb vagy, mint a korodbeliek, veled tényleg lehet beszélgetni' },
   { a: 'lili_csillag', d: '2025.03.07', t: '17:47', x: 'köszi :)' },
   { a: 'Dani_15', d: '2025.03.10', t: '18:20', x: 'mi volt ma a suliban?' },
@@ -239,9 +239,17 @@ function gardenSVG(studio) {
       <text x="6" y="146">▸ Players</text><text x="6" y="157">▸ Lighting</text><text x="6" y="168">▾ ServerScriptService</text><text x="14" y="179" fill="#dcdcaa">NovenyNoves.lua</text><text x="14" y="190" fill="#dcdcaa">Bolt.lua</text></g>
     <svg x="96" y="22" width="320" height="238" viewBox="0 0 320 240">${scene}</svg></svg>`;
 }
+const SHOT_IMG = 'img/kert_build.jpg';
 function shotHTML(big) {
-  const inner = `<div class="shot-tabs"><span class="act">Roblox Studio – kert_build.rbxl</span><span>FromByte Solutions – HelpDesk (12 nyitott jegy)</span><span>FromByte Solutions – Rendszergazdai konzol</span></div>
-    <div class="shot-url">🔒 helpdesk.frombyte-solutions.hu/jegyek?allapot=nyitott</div>${gardenSVG(true)}`;
+  const inner = `<div class="shot-tabs">
+      <span class="act">🎮 Roblox – Grow a Garden</span>
+      <span>🎫 FromByte Solutions – HelpDesk (12 nyitott jegy)</span>
+      <span>🖥️ FromByte Solutions – Rendszergazdai konzol</span>
+      <span>✉️ Levelezés – FromByte Solutions Kft.</span></div>
+    <div class="shot-url">🔒 roblox.com/games/126884695634066/Grow-a-Garden</div>
+    <div class="shot-marks"><span>📁 FromByte intranet</span><span>📁 Jegykezelő</span><span>📁 Szerverfigyelés</span><span>📁 Műszakbeosztás – IT</span></div>
+    <img src="${SHOT_IMG}" alt="Dani képernyőképe egy Roblox-játékról">
+    <div class="shot-task"><span>🪟</span><span>Chrome</span><span>Outlook – FromByte</span><span class="clock">10:52<br>2025.03.05.</span></div>`;
   return big ? `<div class="shot big">${inner}</div>` : `<button class="shot" data-shot aria-label="Képernyőkép megnyitása">${inner}</button><div class="shot-cap">Koppints a nagyításhoz</div>`;
 }
 
@@ -557,7 +565,7 @@ function searchHTML() {
 }
 function bindMedia(root) {
   $$('[data-shot]', root).forEach(el => el.onclick = () => {
-    openModal(`<div class="inner" style="background:#313338"><p style="margin:0 0 8px;color:#dbdee1;font-size:14px">Dani_15 képernyőképe (2025.03.05.)</p>${shotHTML(true)}</div>`);
+    openModal(`<div class="inner" style="background:#313338"><p style="margin:0 0 8px;color:#dbdee1;font-size:14px">Dani_15 képernyőképe (2025.03.05.) – a füleket oldalra húzva görgetheted</p>${shotHTML(true)}</div>`);
     setTimeout(() => addClue('foglalkozas'), 2000);
   });
   $$('[data-img]', root).forEach(el => el.onclick = () => openModal(`<div class="inner" style="background:#313338">
@@ -722,4 +730,6 @@ function showPerson(p) {
   if (first) toast('Gratulálunk, megoldottátok az ügyet!');
 }
 
+const setVh = () => document.documentElement.style.setProperty('--vh', window.innerHeight * 0.01 + 'px');
+setVh(); window.addEventListener('resize', setVh); window.addEventListener('orientationchange', setVh);
 route();

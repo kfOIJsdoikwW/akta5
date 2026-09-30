@@ -94,7 +94,7 @@ const BLOX = [
       ['2025.02.17', '18:30', 'o', 'hány éves vagy amúgy?'],
       ['2025.02.17', '18:31', 'me', '13'],
       ['2025.02.17', '18:31', 'o', 'én 15, szóval majdnem egyidősek vagyunk 😄'],
-      ['2025.02.19', '18:10', 'o', 'honnan vagy?'],
+      ['2025.02.19', '18:10', 'o', 'hova valósi vagy??'],
       ['2025.02.19', '18:12', 'me', 'zugló'],
       ['2025.02.19', '18:12', 'o', 'én a XIII. kerben lakok, egész közel vagyunk 😄'],
       ['2025.02.21', '17:30', 'o', 'itt folyton figyelik a chatet és kitakarják a szavakat. gyere át discordra, ott nyugisabb. ott is dani_15 vagyok, van egy szerverünk, blox kuckó'],
@@ -171,7 +171,7 @@ const CD_MSGS = [
 const CD_DM = [
   { a: 'Dani_15', d: '2025.03.03', t: '16:20', x: 'na végre itt is beszélhetünk 😄' },
   { a: 'lili_csillag', d: '2025.03.03', t: '16:21', x: 'hali' },
-  { a: 'Dani_15', d: '2025.03.03', t: '16:22', x: 'itt sokkal jobb, itt nem figyel senki' },
+  { a: 'Dani_15', d: '2025.03.03', t: '16:22', x: 'dc-t sokkal jobban szeretem' },
   { a: 'Dani_15', d: '2025.03.05', t: '17:10', x: 'nézd, ma ezt szereztem grow a gardenben 😄 arany gyümölcs!!', shot: true },
   { a: 'lili_csillag', d: '2025.03.05', t: '17:14', x: 'wow arany?! 😱 nekem még egy sincs' },
   { a: 'Dani_15', d: '2025.03.05', t: '17:15', x: 'ha akarod, egyszer neked adom 😊' },
